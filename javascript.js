@@ -1,3 +1,4 @@
+// get the word "rock", "paper" or "scissors" from the computer
 function getComputerChoice() {
     // generate a random number between 0 and 2
     let randomNumber = Math.floor(Math.random() * 3);
@@ -11,4 +12,10 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
+// get the word "rock", "paper" or "scissors" from the human
+function getHumanChoice() {
+    // no need to validate the input now, will assume it's correct
+    return prompt("Enter rock, paper or scissors: ");
+}
+
+console.log(getHumanChoice());
