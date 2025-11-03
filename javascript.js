@@ -35,7 +35,7 @@ function playRound(humanChoice,computerChoice) {
     } else if (humanChoice === "paper") {
 
     } else {
-        // it's scissors if its not rock or paper
+        // it's scissors
 
     }
 }
