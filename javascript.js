@@ -26,7 +26,6 @@ let computerScore = 0;
 function playRound(humanChoice,computerChoice) {
     // make humanChoice case-insensitive
     humanChoice = humanChoice.toLowerCase();
-    console.log(computerChoice);
     // game logic:
     // rock beats scissors but loses to paper
     // paper beats rock but loses to scissors
@@ -38,9 +37,13 @@ function playRound(humanChoice,computerChoice) {
             console.log("It's a tie!");
         } else if (computerChoice === "scissors") {
             // win
+            // add 1 to humanScore
+            humanScore+=1;
             console.log("You win! Rock beats Scissors.");
         } else {
             // lose
+            // add 1 to computerScore
+            computerScore+=1;
             console.log("You lose! Paper beats Rock.");
         }
     } else if (humanChoice === "paper") {
@@ -50,9 +53,13 @@ function playRound(humanChoice,computerChoice) {
             console.log("It's a tie!");
         } else if (computerChoice === "rock") {
             // win
+            // add 1 to humanScore
+            humanScore+=1;
             console.log("You win! Paper beats Rock.");
         } else {
             // lose
+            // add 1 to computerScore
+            computerScore+=1;
             console.log("You lose! Scissors beats Paper.");
         }
     } else {
@@ -62,12 +69,21 @@ function playRound(humanChoice,computerChoice) {
             console.log("It's a tie!");
         } else if (computerChoice === "paper") {
             // win
+            // add 1 to humanScore
+            humanScore+=1;
             console.log("You win! Scissors beats Paper.");
         } else {
             // lose
+            // add 1 to computerScore
+            computerScore+=1;
             console.log("You lose! Rock beats Scissors.");
         }
     }
 }
-
-playRound("paper",getComputerChoice());
+console.log(humanScore);
+console.log("---")
+console.log(computerScore);
+playRound("rock", getComputerChoice());
+console.log(humanScore);
+console.log("---");
+console.log(computerScore);
