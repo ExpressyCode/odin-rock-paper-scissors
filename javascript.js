@@ -21,3 +21,12 @@ function getHumanChoice() {
 // players score
 let humanScore = 0;
 let computerScore = 0;
+
+// function to play the game
+function playRound(humanChoice,computerChoice) {
+    // make humanChoice case-insensitive
+    humanChoice = humanChoice.toLowerCase();
+    console.log(humanChoice);
+}
+
+playRound("ROCK", getComputerChoice());
