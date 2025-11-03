@@ -26,7 +26,16 @@ let computerScore = 0;
 function playRound(humanChoice,computerChoice) {
     // make humanChoice case-insensitive
     humanChoice = humanChoice.toLowerCase();
-    console.log(humanChoice);
-}
+    // game logic:
+    // rock beats scissors but loses to paper
+    // paper beats rock but loses to scissors
+    // scissors beats paper but loses to rock
+    if (humanChoice === "rock") {
 
-playRound("ROCK", getComputerChoice());
+    } else if (humanChoice === "paper") {
+
+    } else {
+        // it's scissors if its not rock or paper
+
+    }
+}
