@@ -31,11 +31,31 @@ function playRound(humanChoice,computerChoice) {
     // paper beats rock but loses to scissors
     // scissors beats paper but loses to rock
     if (humanChoice === "rock") {
-
+        // human choose rock
+        if (computerChoice === "scissors") {
+            // win
+            console.log("You win! Rock beats Scissors.");
+        } else {
+            // lose
+            console.log("You lose! Paper beats Rock.");
+        }
     } else if (humanChoice === "paper") {
-
+        // human choose paper
+        if (computerChoice === "rock") {
+            // win
+            console.log("You win! Paper beats Rock.");
+        } else {
+            // lose
+            console.log("You lose! Scissors beats Paper.");
+        }
     } else {
-        // it's scissors
-
+        // human choose scissors
+        if (computerChoice === "paper") {
+            // win
+            console.log("You win! Scissors beats Paper.");
+        } else {
+            // lose
+            console.log("You lose! Rock beats Scissors.");
+        }
     }
 }
