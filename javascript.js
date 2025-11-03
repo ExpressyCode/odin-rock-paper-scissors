@@ -26,13 +26,17 @@ let computerScore = 0;
 function playRound(humanChoice,computerChoice) {
     // make humanChoice case-insensitive
     humanChoice = humanChoice.toLowerCase();
+    console.log(computerChoice);
     // game logic:
     // rock beats scissors but loses to paper
     // paper beats rock but loses to scissors
     // scissors beats paper but loses to rock
     if (humanChoice === "rock") {
         // human choose rock
-        if (computerChoice === "scissors") {
+        if(computerChoice === "rock") {
+            // tie
+            console.log("It's a tie!");
+        } else if (computerChoice === "scissors") {
             // win
             console.log("You win! Rock beats Scissors.");
         } else {
@@ -41,7 +45,10 @@ function playRound(humanChoice,computerChoice) {
         }
     } else if (humanChoice === "paper") {
         // human choose paper
-        if (computerChoice === "rock") {
+        if(computerChoice === "paper") {
+            // tie
+            console.log("It's a tie!");
+        } else if (computerChoice === "rock") {
             // win
             console.log("You win! Paper beats Rock.");
         } else {
@@ -50,7 +57,10 @@ function playRound(humanChoice,computerChoice) {
         }
     } else {
         // human choose scissors
-        if (computerChoice === "paper") {
+        if(computerChoice === "scissors") {
+            // tie
+            console.log("It's a tie!");
+        } else if (computerChoice === "paper") {
             // win
             console.log("You win! Scissors beats Paper.");
         } else {
@@ -59,3 +69,5 @@ function playRound(humanChoice,computerChoice) {
         }
     }
 }
+
+playRound("paper",getComputerChoice());
