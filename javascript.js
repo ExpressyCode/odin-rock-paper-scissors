@@ -1,3 +1,7 @@
+// players score
+let humanScore = 0;
+let computerScore = 0;
+
 // get the word "rock", "paper" or "scissors" from the computer
 function getComputerChoice() {
     // generate a random number between 0 and 2
@@ -17,10 +21,6 @@ function getHumanChoice() {
     // no need to validate the input now, will assume it's correct
     return prompt("Enter rock, paper or scissors: ");
 }
-
-// players score
-let humanScore = 0;
-let computerScore = 0;
 
 // function to play the game
 function playRound(humanChoice,computerChoice) {
@@ -80,10 +80,10 @@ function playRound(humanChoice,computerChoice) {
         }
     }
 }
-console.log(humanScore);
-console.log("---")
-console.log(computerScore);
-playRound("rock", getComputerChoice());
-console.log(humanScore);
-console.log("---");
-console.log(computerScore);
+
+// store humanChoice and computerChoice in "const" because they will never be change
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+// call playRound
+playRound(humanSelection, computerSelection);
